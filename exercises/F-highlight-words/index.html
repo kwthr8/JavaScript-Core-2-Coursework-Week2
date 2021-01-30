@@ -1,18 +1,47 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html lang="en_US">
-  <head>
-    <title>JS Week 2 - Exercises - highlight-words</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="content">
-      <!-- 
+
+<head>
+  <title>JS Week 2 - Exercises - highlight-words</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="content">
+
+    <select id="slct1" name="slct1" onchange="populate(this.id)">
+      <option value=""></option>
+      <option value="yellow">Yellow</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+    <!-- 
         DO NOT EDIT.
         Your work should be put in here using JavaScript.
       -->
-    </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js">
+    function populate(s1, s2) {
+      var s1 = document.getElementById(s1);
+      var s2 = document.getElementById(s2);
+      s2.innerHTML = "";
+      if (s1.value == "yellow") {
+        var optionArray = ["", "blue|Blue"];
+        for (var option in optionArray) {
+          for (var option in optionArray) {
+            var pair = optionArray[option].split("|");
+            var newOption = document.createElement("option");
+            newOption.value = pair[0];
+            newOption.innerHTML = pair[1];
+            s2.options.add(newOption);
+          }
+
+
+        }
+      }
+  </script>
+</body>
+
 </html>

@@ -89,7 +89,10 @@ body {
   max-width: 100px;
   background: #ce5f31;
 }
-
+/* excerise */
+p {
+  color: red;
+}
 /* Article */
 .article {
   margin-bottom: 2em;
