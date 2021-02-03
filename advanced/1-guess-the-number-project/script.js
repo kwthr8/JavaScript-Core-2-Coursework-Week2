@@ -18,6 +18,18 @@ function guessNumber() {
 // 1. Reset the values inside the body of the function
 // 2. Attach our new game button using an event listener to the .btnNewGame button
 function newGame() {
+
+  alert('You have 10 guesses,Guess number 1 - 100')
+  var answer = 43;
+  var guess;
+  for (i = 0; i < 100; i++) {
+    if (answer == guess) {
+      alert("Correct");
+      break;
+    } else {
+      prompt = ("Please try again");
+    }
+  }
   //Your code here
   //Reset randomNumber
   //Reset users input field
